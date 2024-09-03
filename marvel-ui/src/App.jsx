@@ -6,7 +6,7 @@ import './App.css'
 
 const App = () => {
   const [inputValue, setInputValue] = useState('');
-  const [characterName, setCharacterName] = useSate('');
+  const [characterName, setCharacterName] = useState('');
   const [selectedCharacterID, setSelectedCharacterId] = useState(null);
 
   const handleCharacterSelect = (characterId) => {
@@ -23,8 +23,9 @@ const App = () => {
   };
 
   return (
-      <div class="app">
+      <div className="app">
         <h1>Mastering React Functional Components and Axios with useEffect</h1>
+        <h3>Marvel Character Search</h3>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Enter character name" value={inputValue} onChange={handleInputChange} />
           <button type="submit">Search</button>
